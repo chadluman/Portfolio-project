@@ -48,9 +48,9 @@ const Support = () => {
           </div>
 
           <SectionTitle
-            subTitle="Need Any Help?"
-            title="Contact With Us"
-            paragraph="Build SaaS AI applications using OpenAI and Next.js, this kit comes with pre-configured and pre-built examples, making it easier to quickly kickstart your AI startup."
+            subTitle="Want to work together?"
+            title="Get in Touch"
+            paragraph="Have a project or need help solving a technical challenge? Send a message and I&apos;ll respond as soon as possible."
           />
 
           {/* <!-- support form --> */}

@@ -3,44 +3,46 @@ import { Feature } from "@/types/feature";
 const featuresData: Feature[] = [
   {
     id: 1,
-    title: "OpenAI Integration",
+    title: "Cost Savings & Optimization",
     description:
-      "Our AI writing tool analyzes your content, suggests improvements",
+      "Delivered $2.6M in potential savings through system modernization and process improvements.",
     icon: "/images/features/icon-01.svg",
   },
   {
     id: 2,
-    title: "Next.js 15, React 19, TS",
-    description: "Say goodbye to embarrassing typos and grammar mistakes",
+    title: "Systems Reliability & Support",
+    description:
+      "Supported 500+ users across 70+ communications and IT systems with >80% operability.",
     icon: "/images/features/icon-02.svg",
   },
   {
     id: 3,
-    title: "Auth, DB, Sanity Blog",
+    title: "Full Stack Web Development",
     description:
-      "Originality is key, and our AI writing tool helps you maintain it",
+      "Built responsive applications using React, Tailwind CSS, and MySQL for data-driven workflows.",
     icon: "/images/features/icon-03.svg",
   },
   {
     id: 4,
-    title: "Cutting-edge Technologies",
+    title: "Modern Deployments",
     description:
-      "Transform your spoken words into written text easily & effortlessly",
+      "Deployed projects using GitHub version control, CI/CD pipelines, and Vercel hosting.",
     icon: "/images/features/icon-04.svg",
     rotate: true,
   },
   {
     id: 5,
-    title: "Pre-made AI Examples",
+    title: "Cross-Functional Communication",
     description:
-      "Whether you need a professional, or positive tone it has everyone",
+      "Translate technical requirements for leadership and non-technical stakeholders.",
     icon: "/images/features/icon-05.svg",
     rotate: true,
   },
   {
     id: 6,
-    title: "Rich Documentation",
-    description: "Need inspiration or assistance with generating content?",
+    title: "Networking & IT Systems",
+    description:
+      "Experienced with routing, switching, satellite systems, servers, and hardware troubleshooting.",
     icon: "/images/features/icon-06.svg",
     rotate: true,
   },

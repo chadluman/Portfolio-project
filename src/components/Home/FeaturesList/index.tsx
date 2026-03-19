@@ -23,17 +23,15 @@ const FeaturesList = () => {
                         />
 
                         <span className="hero-subtitle-text">
-                          Kickstart your AI Startup
+                          Technical Skills
                         </span>
                       </span>
                       <h3 className="mb-4.5 text-heading-4 font-bold text-white">
-                        Seamless OpenAI Integration
+                        Web Development & Design
                       </h3>
                       <p className="mb-10 font-medium">
-                        Build SaaS AI applications using OpenAI and Next.js,
-                        this kit comes with pre-configured and pre-built
-                        examples, making it easier to quickly kickstart your AI
-                        startup.
+                        HTML, CSS, JavaScript, React.js, and Tailwind CSS —
+                        building responsive, accessible interfaces that scale.
                       </p>
                       <Link
                         href="/#"
@@ -135,12 +133,11 @@ const FeaturesList = () => {
                     </span>
 
                     <h3 className="mb-4.5 text-heading-6 font-semibold text-white">
-                      All Essential SaaS Pages
+                      Tools & Platforms
                     </h3>
                     <p className="font-medium">
-                      Build SaaS AI applications using OpenAI and Next.js, this
-                      kit comes with pre-configured and pre-built examples,
-                      making it easier to quickly kickstart.
+                      GitHub, Vercel, and modern CI/CD practices for reliable
+                      deployments and maintainable codebases.
                     </p>
                   </div>
 
@@ -196,11 +193,11 @@ const FeaturesList = () => {
                     </span>
 
                     <h3 className="mb-4.5 text-heading-6 font-semibold text-white">
-                      Highly Customizable
+                      IT & Systems Experience
                     </h3>
                     <p className="font-medium">
-                      Build SaaS AI applications using OpenAI and Next.js,
-                      quickly kickstart your AI startup.
+                      Networking, servers, routers, switches, and satellite systems
+                      — keeping infrastructure reliable and secure.
                     </p>
                   </div>
 

@@ -31,15 +31,16 @@ const Footer = () => {
               </Link>
 
               <p className="mb-12 xl:w-4/5">
-                Build SaaS AI applications using OpenAI and Next.js, this kit
-                comes with pre-configured and pre-built examples, making it
-                easier to quickly kickstart your AI startup.
+                USMC veteran and full stack developer building scalable web
+                applications and reliable systems for mission-critical workflows.
               </p>
 
               <div className="flex items-center gap-5">
                 <a
-                  href="#"
-                  aria-label="facebook"
+                  href="https://linkedin.com/in/chad-luman"
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label="linkedin"
                   className="duration-300 ease-in hover:text-white"
                 >
                   <svg
@@ -58,8 +59,10 @@ const Footer = () => {
                 </a>
 
                 <a
-                  href="#"
-                  aria-label="twitter"
+                  href="https://github.com/chadluman"
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label="github"
                   className="duration-300 ease-in hover:text-white"
                 >
                   <svg
@@ -78,8 +81,8 @@ const Footer = () => {
                 </a>
 
                 <a
-                  href="#"
-                  aria-label="github"
+                  href="mailto:Luman.Chad@outlook.com"
+                  aria-label="email"
                   className="duration-300 ease-in hover:text-white"
                 >
                   <svg
@@ -106,7 +109,7 @@ const Footer = () => {
               </div>
 
               <p className="mt-5.5 font-medium">
-                AI Tool, LLC. All rights reserved.
+                © {new Date().getFullYear()} Chad Luman. All rights reserved.
               </p>
             </div>
 

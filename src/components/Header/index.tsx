@@ -119,7 +119,7 @@ const Header = () => {
               </ul>
             </nav>
 
-            <div className="mt-7 flex items-center gap-6 lg:mt-0">
+            {/* <div className="mt-7 flex items-center gap-6 lg:mt-0">
               {session ? (
                 <>
                   <p>{session?.user?.name}</p>
@@ -160,7 +160,7 @@ const Header = () => {
                   </Link>
                 </>
               )}
-            </div>
+            </div> */}
           </div>
         </div>
       </header>

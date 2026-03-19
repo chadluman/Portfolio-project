@@ -5,9 +5,9 @@ import { Metadata } from "next";
 import { integrations, messages } from "../../../../integrations.config";
 
 export const metadata: Metadata = {
-  title: "Blog | AI Tool - Next.js Template for AI Tools",
-  description: "This is Blog page for AI Tool",
-  // other metadata
+  title: "Blog | Chad Luman",
+  description:
+    "Personal blog and technical notes from Chad Luman — full stack developer and systems analyst.",
 };
 
 export default async function BlogPage() {

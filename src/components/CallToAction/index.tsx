@@ -3,7 +3,7 @@ import Link from "next/link";
 
 const CallToAction = () => {
   return (
-    <section>
+    <section id="contact">
       <div className="mx-auto max-w-[1170px] px-4 sm:px-8 xl:px-0">
         <div className="cta-box-gradient relative z-999 overflow-hidden rounded-[30px] bg-dark px-4 py-20 lg:py-25">
           {/* <!-- bg shapes --> */}
@@ -52,22 +52,22 @@ const CallToAction = () => {
                 height={16}
               />
 
-              <span className="hero-subtitle-text">Try our tool for Free</span>
+              <span className="hero-subtitle-text">Ready to collaborate?</span>
             </span>
             <h2 className="mb-4.5 text-2xl font-extrabold text-white sm:text-4xl xl:text-heading-2">
-              What are you waiting for?
+              Let&apos;s build something together
             </h2>
             <p className="mx-auto mb-9 max-w-[714px] font-medium">
-              Build SaaS AI applications using OpenAI and Next.js, this kit
-              comes with pre-configured and pre-built examples, making it easier
-              to quickly kickstart your AI startup.
+              Reach out to discuss projects, freelancing opportunities, or
+              anything related to web development, systems engineering, and
+              operations.
             </p>
 
             <Link
-              href="/"
+              href="mailto:Luman.Chad@outlook.com"
               className="hero-button-gradient inline-flex rounded-lg px-7 py-3 font-medium text-white duration-300 ease-in hover:opacity-80"
             >
-              Get Started for Free
+              Email Me
             </Link>
           </div>
         </div>

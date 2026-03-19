@@ -5,29 +5,29 @@ const Newsletter = () => {
         <div className="flex flex-wrap items-center justify-between gap-10">
           <div className="w-full max-w-[352px]">
             <h3 className="mb-2 text-heading-5 font-semibold text-white">
-              News & Update
+              Get in Touch
             </h3>
             <p className="font-medium">
-              Keep up to date with everything about our tool
+              Send a message or connect via LinkedIn to discuss your next
+              project.
             </p>
           </div>
-          <div className="w-full max-w-[534px]">
-            <form>
-              <div className="flex items-center gap-4">
-                <div className="w-full max-w-[395px]">
-                  <input
-                    id="newsletterEmail"
-                    type="email"
-                    name="newsletterEmail"
-                    placeholder="Enter your Email"
-                    className="w-full rounded-lg border border-white/[0.12] bg-white/[0.05] px-6 py-3 text-white outline-hidden focus:border-purple"
-                  />
-                </div>
-                <button className="button-border-gradient hover:button-gradient-hover relative flex items-center gap-1.5 rounded-lg px-7 py-3.5 text-sm text-white shadow-button hover:shadow-none">
-                  Subscribe
-                </button>
-              </div>
-            </form>
+
+          <div className="flex w-full max-w-[534px] flex-col gap-4 sm:flex-row sm:items-center">
+            <a
+              href="mailto:Luman.Chad@outlook.com"
+              className="button-border-gradient hover:button-gradient-hover relative flex items-center justify-center rounded-lg px-7 py-3 text-sm text-white shadow-button hover:shadow-none"
+            >
+              Email Me
+            </a>
+            <a
+              href="https://linkedin.com/in/chad-luman"
+              target="_blank"
+              rel="noreferrer"
+              className="button-border-gradient hover:button-gradient-hover relative flex items-center justify-center rounded-lg px-7 py-3 text-sm text-white shadow-button hover:shadow-none"
+            >
+              LinkedIn
+            </a>
           </div>
         </div>
       </div>

@@ -36,26 +36,50 @@ const Hero = () => {
             />
 
             <span className='hero-subtitle-text'>
-              Launch Your AI Startup with
+              United States Marine Corps Veteran & Full Stack Developer
             </span>
           </span>
           <h1 className='xl:text-heading-1 mb-6 text-3xl font-extrabold text-white sm:text-5xl'>
-            OpenAI + Next.js SaaS Boilerplate and Starter Kit
+            Hi, I&apos;m Chad Luman
           </h1>
 
-          <p className='mx-auto mb-9 max-w-[500px] font-medium md:text-lg'>
-            Ideal for developers looking to build SaaS applications using OpenAI
-            and Next.js, this starter kit comes with pre-configured and
-            pre-built examples, making it easier to quickly kickstart your AI
-            startup.
+          <p className='mx-auto mb-6 max-w-[550px] font-medium md:text-lg'>
+            I build responsive, scalable web applications using React, Tailwind,
+            and modern cloud workflows. I bring 8+ years of IT systems and
+            telecommunications experience (USMC + Army) to every project.
           </p>
 
-          <Link
-            href='/ai-examples'
-            className='hero-button-gradient inline-flex rounded-lg px-7 py-3 font-medium text-white duration-300 ease-in hover:opacity-80'
-          >
-            Try AI Examples
-          </Link>
+          <div className='mx-auto mb-9 flex flex-col gap-3 text-sm md:flex-row md:justify-center md:gap-6'>
+            <span>Fort Bliss, TX</span>
+            <span>•</span>
+            <span>209.406.8040</span>
+            <span>•</span>
+            <span>
+              <Link
+                href='mailto:Luman.Chad@outlook.com'
+                className='underline decoration-transparent hover:decoration-white'
+              >
+                Luman.Chad@outlook.com
+              </Link>
+            </span>
+          </div>
+
+          <div className='flex flex-col items-center justify-center gap-3 sm:flex-row sm:gap-5'>
+            <Link
+              href='mailto:Luman.Chad@outlook.com'
+              className='hero-button-gradient inline-flex rounded-lg px-7 py-3 font-medium text-white duration-300 ease-in hover:opacity-80'
+            >
+              Contact Me
+            </Link>
+            <Link
+              href='https://linkedin.com/in/chad-luman'
+              target='_blank'
+              rel='noreferrer'
+              className='inline-flex rounded-lg border border-white/20 bg-white/10 px-7 py-3 font-medium text-white duration-300 ease-in hover:bg-white/20'
+            >
+              View LinkedIn
+            </Link>
+          </div>
         </div>
       </div>
 
