@@ -1,10 +1,12 @@
-import { getPosts } from "@/sanity/sanity-utils";
 import { Blog } from "@/types/blog";
 import SectionTitle from "../Common/SectionTitle";
-import SingleBlog from "./SingleBlog";
 
 export default async function BlogSection() {
-  const posts = await getPosts();
+  const posts: Blog[] = [];
+
+  if (posts.length === 0) {
+    return null;
+  }
 
   return (
     <section className="py-20 lg:py-25">
@@ -16,12 +18,7 @@ export default async function BlogSection() {
         />
 
         <div className="grid grid-cols-1 gap-7.5 sm:grid-cols-2 lg:grid-cols-3">
-          {posts.length > 0 &&
-            posts
-              .slice(0, 3)
-              .map((blog: Blog, index: number) => (
-                <SingleBlog key={index} blog={blog} />
-              ))}
+          {/* Blog posts will be displayed here */}
         </div>
       </div>
     </section>

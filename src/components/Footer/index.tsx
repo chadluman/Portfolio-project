@@ -31,11 +31,11 @@ const Footer = () => {
               </Link>
 
               <p className="mb-12 xl:w-4/5">
-                USMC veteran and full stack developer building scalable web
+                USMC & ARMY veteran and full stack developer building scalable web
                 applications and reliable systems for mission-critical workflows.
               </p>
 
-              <div className="flex items-center gap-5">
+              {/* <div className="flex items-center gap-5">
                 <a
                   href="https://linkedin.com/in/chad-luman"
                   target="_blank"
@@ -106,7 +106,7 @@ const Footer = () => {
                     </defs>
                   </svg>
                 </a>
-              </div>
+              </div> */}
 
               <p className="mt-5.5 font-medium">
                 © {new Date().getFullYear()} Chad Luman. All rights reserved.
