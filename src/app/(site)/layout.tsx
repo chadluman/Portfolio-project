@@ -7,6 +7,7 @@ import Footer from '@/components/Footer';
 import AnimeEffects from '@/components/Common/AnimeEffects';
 import Header from '@/components/Header';
 import ScrollToTop from '@/components/ScrollToTop';
+import { Analytics } from '@vercel/analytics/next';
 import { Plus_Jakarta_Sans } from 'next/font/google';
 import NextTopLoader from 'nextjs-toploader';
 import AuthProvider from '../context/AuthContext';
@@ -44,6 +45,7 @@ export default function RootLayout({
         </div>
 
         <ScrollToTop />
+        <Analytics />
       </body>
     </html>
   );
