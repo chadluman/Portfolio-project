@@ -7,7 +7,10 @@ const AboutSection = () => {
         <div className="about-divider-gradient absolute bottom-0 left-0 h-[1px] w-full"></div>
 
         <div className="flex flex-wrap justify-between gap-11 xl:flex-nowrap">
-          <div className="wow fadeInLeft w-full max-w-[570px]">
+          <div
+            className="wow fadeInLeft w-full max-w-[570px]"
+            data-anime-reveal
+          >
             <span className="hero-subtitle-text mb-5 block font-semibold">
             About Me
           </span>
@@ -33,12 +36,16 @@ const AboutSection = () => {
           <a
             href="mailto:Luman.Chad@outlook.com"
             className="hero-button-gradient inline-flex rounded-lg px-7 py-3 font-medium text-white duration-300 ease-in hover:opacity-80"
+            data-anime-button
           >
             Contact Me
           </a>
           </div>
 
-          <div className="wow fadeInRight relative hidden aspect-556/401 w-full xl:block">
+          <div
+            className="wow fadeInRight relative hidden aspect-556/401 w-full xl:block"
+            data-anime-reveal
+          >
             <Image src="/images/about/about.svg" alt="about" fill />
           </div>
         </div>

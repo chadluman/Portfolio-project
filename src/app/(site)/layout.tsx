@@ -4,6 +4,7 @@ import '@/styles/star.css';
 import '@/styles/tailwind.css';
 
 import Footer from '@/components/Footer';
+import AnimeEffects from '@/components/Common/AnimeEffects';
 import Header from '@/components/Header';
 import ScrollToTop from '@/components/ScrollToTop';
 import { Plus_Jakarta_Sans } from 'next/font/google';
@@ -34,6 +35,7 @@ export default function RootLayout({
 
           <AuthProvider>
             <Header />
+            <AnimeEffects />
             {children}
             <Footer />
 

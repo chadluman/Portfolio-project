@@ -43,7 +43,7 @@ const CallToAction = () => {
             <div className="stars2"></div>
           </div>
 
-          <div className="wow fadeInUp text-center">
+          <div className="wow fadeInUp text-center" data-anime-reveal>
             <span className="hero-subtitle-gradient relative mb-4 inline-flex items-center gap-2 rounded-full px-4.5 py-2 text-sm font-medium">
               <Image
                 src="/images/hero/icon-title.svg"
@@ -66,6 +66,7 @@ const CallToAction = () => {
             <Link
               href="mailto:Luman.Chad@outlook.com"
               className="hero-button-gradient inline-flex rounded-lg px-7 py-3 font-medium text-white duration-300 ease-in hover:opacity-80"
+              data-anime-button
             >
               Email Me
             </Link>

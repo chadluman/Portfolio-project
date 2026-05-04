@@ -15,12 +15,18 @@ const menuData: Menu[] = [
   },
   {
     id: 3,
+    title: "Projects",
+    newTab: false,
+    path: "/projects",
+  },
+  {
+    id: 4,
     title: "Contact",
     newTab: false,
     path: "/#contact",
   },
   {
-    id: 4,
+    id: 5,
     title: "Blog",
     newTab: false,
     path: "/blog",
