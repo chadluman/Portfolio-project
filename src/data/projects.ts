@@ -30,7 +30,10 @@ export const projects: Project[] = [
       "Environment-based API key configuration",
       "Responsive Tailwind layout",
     ],
-    runSteps: ["npm install", "Create .env with VITE_OPENWEATHER_API_KEY", "npm run dev"],
+    runSteps: [
+      "Set OPENWEATHER_API_KEY on the portfolio server",
+      "Open /weather-dashboard/index.html",
+    ],
   },
   {
     slug: "task-manager",

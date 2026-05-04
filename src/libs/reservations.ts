@@ -1,4 +1,5 @@
 import fs from "fs/promises";
+import os from "os";
 import path from "path";
 
 export type Reservation = {
@@ -17,13 +18,16 @@ export type Reservation = {
   updatedAt: string;
 };
 
-const dataDirectory = path.join(
-  process.cwd(),
-  "other projects",
-  "hot air balloon",
-  "server",
-  "data",
-);
+const dataDirectory =
+  process.env.VERCEL === "1"
+    ? path.join(os.tmpdir(), "north-sky-ballooning")
+    : path.join(
+        process.cwd(),
+        "other projects",
+        "hot air balloon",
+        "server",
+        "data",
+      );
 
 const dataFile = path.join(dataDirectory, "reservations.json");
 
