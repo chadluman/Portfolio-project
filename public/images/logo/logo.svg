@@ -1,29 +1,61 @@
-<svg width="1400" height="420" viewBox="0 0 1400 420" xmlns="http://www.w3.org/2000/svg">
-  <rect width="1400" height="420" fill="#0b0b0b"/>
+<svg width="520" height="360" viewBox="0 0 520 360" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="logo-title">
+  <title id="logo-title">Chad Luman</title>
+  <defs>
+    <linearGradient id="cl-navy" x1="96" y1="52" x2="260" y2="260" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#6F7F8C"/>
+      <stop offset="0.42" stop-color="#232A40"/>
+      <stop offset="1" stop-color="#0F0A18"/>
+    </linearGradient>
+    <linearGradient id="cl-violet" x1="212" y1="106" x2="360" y2="282" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#B548FF"/>
+      <stop offset="0.52" stop-color="#4F078A"/>
+      <stop offset="1" stop-color="#9B16F1"/>
+    </linearGradient>
+    <linearGradient id="cl-slate" x1="96" y1="283" x2="424" y2="330" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F7FBFF"/>
+      <stop offset="0.5" stop-color="#6F7F8C"/>
+      <stop offset="1" stop-color="#F7FBFF"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="55" y="28" width="410" height="305" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="4" stdDeviation="3" flood-color="#05030A" flood-opacity="0.55"/>
+    </filter>
+  </defs>
 
-  <!-- Outer frame -->
-  <rect x="40" y="40" width="1320" height="340" fill="none" stroke="#ffffff" stroke-width="10"/>
+  <g filter="url(#soft-shadow)">
+    <path
+      d="M255 49C189 49 135 92 121 154C106 222 145 270 200 289V252C166 234 148 198 156 158C166 108 209 78 262 78C307 78 347 94 391 110L397 154L408 118L401 86C354 63 309 49 255 49Z"
+      fill="url(#cl-navy)"
+      stroke="#DDE6EB"
+      stroke-width="1.2"
+      stroke-opacity="0.45"
+    />
+    <path
+      d="M225 111H307C300 116 294 122 291 132V256C291 267 296 274 309 277H389L404 225C393 247 376 258 349 258H296V132C299 122 314 116 324 111H225Z"
+      fill="url(#cl-violet)"
+      stroke="#E7D9FB"
+      stroke-width="1.2"
+      stroke-opacity="0.55"
+    />
+    <path
+      d="M223 111C236 116 245 126 246 140V273C244 285 236 292 221 297H397L414 238C401 265 380 278 350 278H276V140C278 126 287 116 301 111H223Z"
+      fill="url(#cl-violet)"
+      fill-opacity="0.86"
+    />
+  </g>
 
-  <!-- Accent bar -->
-  <rect x="70" y="70" width="18" height="280" fill="#ff3b30"/>
+  <text
+    x="260"
+    y="328"
+    text-anchor="middle"
+    font-family="Cinzel, Georgia, 'Times New Roman', serif"
+    font-size="40"
+    font-weight="600"
+    letter-spacing="16"
+    fill="#DDE6EB"
+    stroke="#0F0A18"
+    stroke-width="1"
+  >CHAD LUMAN</text>
 
-  <!-- Main text -->
-  <text x="120" y="180"
-        font-family="Impact, Arial Black, sans-serif"
-        font-size="120"
-        font-weight="900"
-        letter-spacing="6"
-        fill="#ffffff">
-    CHAD
-  </text>
-
-  <text x="120" y="295"
-        font-family="Impact, Arial Black, sans-serif"
-        font-size="120"
-        font-weight="900"
-        letter-spacing="10"
-        fill="#ff3b30">
-    LUMAN
-  </text>
-
+  <path d="M116 345H235" stroke="url(#cl-slate)" stroke-width="2"/>
+  <path d="M285 345H404" stroke="url(#cl-slate)" stroke-width="2"/>
 </svg>

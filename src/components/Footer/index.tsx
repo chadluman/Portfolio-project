@@ -27,7 +27,13 @@ const Footer = () => {
           <div className="flex flex-wrap justify-between">
             <div className="mb-10 w-full max-w-[520px]">
               <Link href="/" className="mb-8.5 inline-block">
-                <Image src={logo} alt="Logo" width={164} height={36} />
+                <Image
+                  src={logo}
+                  alt="Chad Luman logo"
+                  width={180}
+                  height={125}
+                  style={{ height: "auto" }}
+                />
               </Link>
 
               <p className="mb-12 xl:w-4/5">

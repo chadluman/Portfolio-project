@@ -41,7 +41,14 @@ const Header = () => {
         <div className="relative mx-auto max-w-[1170px] items-center justify-between px-4 sm:px-8 lg:flex xl:px-0">
           <div className="flex w-full items-center justify-between lg:w-1/4">
             <Link href="/">
-              <Image src={logo} alt="Logo" width={164} height={36} />
+              <Image
+                src={logo}
+                alt="Chad Luman logo"
+                width={128}
+                height={89}
+                priority
+                style={{ height: "auto" }}
+              />
             </Link>
 
             <button

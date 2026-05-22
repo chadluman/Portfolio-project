@@ -5,6 +5,8 @@ export type Project = {
   summary: string;
   description: string;
   imageLabel: string;
+  previewImage: string;
+  previewAlt: string;
   accent: string;
   launchPath: string;
   stack: string[];
@@ -22,7 +24,9 @@ export const projects: Project[] = [
     description:
       "Weather Dashboard is a Vite-powered React project that connects to OpenWeatherMap. It includes reusable search, weather card, and error message components so users can look up weather quickly from a responsive interface.",
     imageLabel: "Live weather search",
-    accent: "from-sky-400 via-cyan-300 to-emerald-300",
+    previewImage: "/images/projects/weather-dashboard.png",
+    previewAlt: "Screenshot of the Weather Dashboard app",
+    accent: "from-[#f7fbff] via-[#6f7f8c] to-[#9b16f1]",
     launchPath: "/weather-dashboard/index.html",
     stack: ["React", "Vite", "Tailwind CSS", "OpenWeatherMap API"],
     highlights: [
@@ -44,7 +48,9 @@ export const projects: Project[] = [
     description:
       "Task Manager focuses on the fundamentals: managing tasks in the browser with direct DOM interactions, clean styling, and a small footprint. It is a practical front-end project for organizing simple daily work.",
     imageLabel: "Task workflow board",
-    accent: "from-amber-300 via-rose-300 to-red-400",
+    previewImage: "/images/projects/task-manager.png",
+    previewAlt: "Screenshot of the Task Manager app",
+    accent: "from-[#eef4f7] via-[#b548ff] to-[#4f078a]",
     launchPath: "/apps/task-manager/index.html",
     stack: ["HTML", "CSS", "JavaScript"],
     highlights: [
@@ -63,7 +69,9 @@ export const projects: Project[] = [
     description:
       "MoveLedger is packaged as a VS Code-ready local web app. It includes app files, a small static server, demo login details, and local browser storage for testing moving and inventory workflows.",
     imageLabel: "Inventory logging app",
-    accent: "from-lime-300 via-teal-300 to-blue-400",
+    previewImage: "/images/projects/moveledger.png",
+    previewAlt: "Screenshot of the MoveLedger inventory app",
+    accent: "from-[#f7fbff] via-[#9b16f1] to-[#0f0a18]",
     launchPath: "/apps/moveledger/index.html",
     stack: ["HTML", "CSS", "JavaScript", "Node.js"],
     highlights: [
@@ -82,7 +90,9 @@ export const projects: Project[] = [
     description:
       "North Sky Ballooning combines a Tailwind and React front end with a lightweight Express backend. Visitors can book a flight through a popup reservation flow while admins review and respond to reservations.",
     imageLabel: "Booking experience",
-    accent: "from-orange-300 via-fuchsia-300 to-indigo-400",
+    previewImage: "/images/projects/north-sky-ballooning.png",
+    previewAlt: "Screenshot of the North Sky Ballooning booking app",
+    accent: "from-[#6f7f8c] via-[#9b16f1] to-[#37045f]",
     launchPath: "/apps/north-sky-ballooning/index.html",
     stack: ["React", "Vite", "Tailwind CSS", "Express"],
     highlights: [

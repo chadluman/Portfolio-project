@@ -8,6 +8,7 @@ import AnimeEffects from '@/components/Common/AnimeEffects';
 import Header from '@/components/Header';
 import ScrollToTop from '@/components/ScrollToTop';
 import { Analytics } from '@vercel/analytics/next';
+import type { Metadata } from 'next';
 import { Plus_Jakarta_Sans } from 'next/font/google';
 import NextTopLoader from 'nextjs-toploader';
 import AuthProvider from '../context/AuthContext';
@@ -17,6 +18,14 @@ const plusJakarta = Plus_Jakarta_Sans({
   subsets: ['latin'],
   display: 'swap',
 });
+
+export const metadata: Metadata = {
+  icons: {
+    icon: '/images/logo/favicon.svg',
+    shortcut: '/images/logo/favicon.svg',
+    apple: '/images/logo/favicon.svg',
+  },
+};
 
 export default function RootLayout({
   children,
@@ -28,7 +37,7 @@ export default function RootLayout({
       <body>
         <div className='isolate'>
           <NextTopLoader
-            color='#8646F4'
+            color='#9b16f1'
             crawlSpeed={300}
             showSpinner={false}
             shadow='none'

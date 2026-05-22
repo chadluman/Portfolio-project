@@ -88,8 +88,8 @@
 <stop offset="1" stop-color="white" stop-opacity="0"/>
 </linearGradient>
 <linearGradient id="paint8_linear_46_11228" x1="296.169" y1="245.026" x2="229.031" y2="281.028" gradientUnits="userSpaceOnUse">
-<stop stop-color="#701EFC"/>
-<stop offset="1" stop-color="#CBB3F3"/>
+<stop stop-color="#4F078A"/>
+<stop offset="1" stop-color="#F7FBFF"/>
 </linearGradient>
 <linearGradient id="paint9_linear_46_11228" x1="259.722" y1="260.803" x2="250.419" y2="263.372" gradientUnits="userSpaceOnUse">
 <stop stop-color="#ECE0FF"/>

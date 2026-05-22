@@ -62,9 +62,7 @@ const Hero = () => {
             className='mx-auto mb-9 flex flex-col gap-3 text-sm md:flex-row md:justify-center md:gap-6'
             data-anime-child
           >
-            <span>Fort Bliss, TX</span>
-            <span>•</span>
-            <span>209.406.8040</span>
+            <span>Clarksville, TN</span>
             <span>•</span>
             <span>
               <Link

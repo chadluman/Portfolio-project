@@ -13,7 +13,7 @@ const Video = () => {
           <button
             aria-label="video play button"
             onClick={() => setToggler(!toggler)}
-            className="absolute left-1/2 top-1/2 z-10 flex h-27.5 w-27.5 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full bg-linear-to-b from-[#A073EE] to-[#6E25ED] shadow-video"
+            className="absolute left-1/2 top-1/2 z-10 flex h-27.5 w-27.5 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full bg-linear-to-b from-[#b548ff] to-[#4f078a] shadow-video"
           >
             <svg
               width="30"

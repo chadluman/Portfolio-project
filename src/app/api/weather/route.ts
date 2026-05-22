@@ -42,11 +42,20 @@ export const GET = async (request: NextRequest) => {
 
   return NextResponse.json({
     city: data.name,
+    country: data.sys?.country,
     temp: Math.round(data.main.temp),
     feelsLike: Math.round(data.main.feels_like),
+    tempMin: Math.round(data.main.temp_min),
+    tempMax: Math.round(data.main.temp_max),
     humidity: data.main.humidity,
+    pressure: data.main.pressure,
+    visibility: Math.round((data.visibility || 0) / 1609.344),
     wind: Math.round(data.wind.speed),
     description: data.weather[0].description,
+    condition: data.weather[0].main,
+    conditionCode: data.weather[0].id,
     icon: data.weather[0].icon,
+    sunrise: data.sys?.sunrise,
+    sunset: data.sys?.sunset,
   });
 };

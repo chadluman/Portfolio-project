@@ -1,0 +1,35 @@
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="favicon-title">
+  <title id="favicon-title">Chad Luman monogram</title>
+  <rect width="512" height="512" rx="96" fill="#0F0A18"/>
+  <defs>
+    <linearGradient id="mark-navy" x1="98" y1="72" x2="274" y2="365" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#6F7F8C"/>
+      <stop offset="0.42" stop-color="#232A40"/>
+      <stop offset="1" stop-color="#0F0A18"/>
+    </linearGradient>
+    <linearGradient id="mark-violet" x1="217" y1="145" x2="384" y2="412" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#B548FF"/>
+      <stop offset="0.52" stop-color="#4F078A"/>
+      <stop offset="1" stop-color="#9B16F1"/>
+    </linearGradient>
+  </defs>
+  <path
+    d="M251 74C175 74 113 124 97 197C80 276 126 332 190 354V311C151 290 131 249 140 202C151 143 202 108 264 108C316 108 363 127 413 146L420 197L433 155L425 118C371 91 314 74 251 74Z"
+    fill="url(#mark-navy)"
+    stroke="#DDE6EB"
+    stroke-width="3"
+    stroke-opacity="0.42"
+  />
+  <path
+    d="M213 147H309C301 153 294 161 290 172V319C290 332 296 340 312 344H405L424 281C411 307 390 320 359 320H296V172C300 161 317 153 329 147H213Z"
+    fill="url(#mark-violet)"
+    stroke="#E7D9FB"
+    stroke-width="2"
+    stroke-opacity="0.5"
+  />
+  <path
+    d="M210 147C226 153 236 165 238 181V337C236 351 226 359 209 365H413L434 295C418 327 394 342 359 342H273V181C276 165 286 153 303 147H210Z"
+    fill="url(#mark-violet)"
+    fill-opacity="0.86"
+  />
+</svg>

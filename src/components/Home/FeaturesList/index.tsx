@@ -4,7 +4,7 @@ import Highlighter from "./HighLighter";
 
 const FeaturesList = () => {
   return (
-    <section className="pt-12.5">
+    <section className="pb-7.5 pt-12.5">
       <div className="mx-auto max-w-[1170px] px-4 sm:px-8 xl:px-0">
         <div className="grid gap-7.5 sm:grid-cols-12">
           {/* <!-- features item --> */}
@@ -64,14 +64,6 @@ const FeaturesList = () => {
 
                   {/* <!-- bg shapes --> */}
                   <div className="pointer-events-none absolute inset-0 -z-10 -mx-28 overflow-hidden">
-                    <span className="absolute bottom-0 right-0">
-                      <Image
-                        src="/images/features/shape-01.png"
-                        alt="shape"
-                        width={282}
-                        height={226}
-                      />
-                    </span>
                     <span className="absolute left-0 top-0 aspect-1170/192 w-full">
                       <Image
                         src="/images/features/shape-02.svg"
@@ -118,10 +110,10 @@ const FeaturesList = () => {
           </div>
 
           {/* <!-- features item --> */}
-          <div className="sm:col-span-7">
+          <div className="sm:col-span-6">
             <Highlighter>
-              <div className="features-box-border relative rounded-3xl">
-                <div className="box-hover box-hover-small relative overflow-hidden rounded-3xl px-11 pb-14 pt-12.5">
+              <div className="features-box-border relative h-full rounded-3xl">
+                <div className="box-hover box-hover-small relative h-full overflow-hidden rounded-3xl px-11 pb-14 pt-12.5">
                   <div className="relative z-20">
                     <span className="icon-border relative mx-auto mb-13.5 inline-flex h-20 w-full max-w-[80px] items-center justify-center rounded-full">
                       <Image
@@ -178,10 +170,10 @@ const FeaturesList = () => {
           </div>
 
           {/* <!-- features item --> */}
-          <div className="sm:col-span-5">
+          <div className="sm:col-span-6">
             <Highlighter>
-              <div className="features-box-border relative rounded-3xl">
-                <div className="box-hover box-hover-small relative overflow-hidden rounded-3xl px-11 pb-14 pt-12.5">
+              <div className="features-box-border relative h-full rounded-3xl">
+                <div className="box-hover box-hover-small relative h-full overflow-hidden rounded-3xl px-11 pb-14 pt-12.5">
                   <div className="relative z-20">
                     <span className="icon-border relative mx-auto mb-13.5 inline-flex h-20 w-full max-w-[80px] items-center justify-center rounded-full">
                       <Image
