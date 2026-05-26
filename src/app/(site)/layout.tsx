@@ -11,7 +11,6 @@ import { Analytics } from '@vercel/analytics/next';
 import type { Metadata } from 'next';
 import { Plus_Jakarta_Sans } from 'next/font/google';
 import NextTopLoader from 'nextjs-toploader';
-import AuthProvider from '../context/AuthContext';
 import ToasterContext from '../context/ToastContext';
 
 const plusJakarta = Plus_Jakarta_Sans({
@@ -43,14 +42,12 @@ export default function RootLayout({
             shadow='none'
           />
 
-          <AuthProvider>
-            <Header />
-            <AnimeEffects />
-            {children}
-            <Footer />
+          <Header />
+          <AnimeEffects />
+          {children}
+          <Footer />
 
-            <ToasterContext />
-          </AuthProvider>
+          <ToasterContext />
         </div>
 
         <ScrollToTop />
