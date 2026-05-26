@@ -1,0 +1,6 @@
+{
+  "appId": "app.moveledger.mobile",
+  "appName": "MoveLedger",
+  "webDir": "www",
+  "bundledWebRuntime": false
+}
