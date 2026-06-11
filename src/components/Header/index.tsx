@@ -1,9 +1,7 @@
 'use client';
-import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useEffect, useState } from 'react';
-import logo from '../../../public/images/logo/logo.svg';
 import DropDown from './DropDown';
 import menuData from './menuData';
 
@@ -29,28 +27,38 @@ const Header = () => {
   return (
     <>
       <header
-        className={`fixed top-0 left-0 z-1000 w-full ${
+        className={`fixed top-0 left-0 z-1000 w-full border-b transition duration-300 ${
           stickyMenu
-            ? 'before:features-row-border bg-dark/70 py-4! shadow-sm backdrop-blur-lg transition duration-100 before:absolute before:bottom-0 before:left-0 before:h-[1px] before:w-full lg:py-0!'
-            : 'py-7 lg:py-0'
+            ? 'border-white/10 bg-[#11110f]/90 py-3! backdrop-blur-xl lg:py-0!'
+            : 'border-transparent bg-transparent py-5 lg:py-0'
         }`}
       >
-        <div className='relative mx-auto max-w-[1170px] items-center justify-between px-4 sm:px-8 lg:flex xl:px-0'>
+        <div className='relative mx-auto max-w-[1240px] items-center justify-between px-5 sm:px-8 lg:flex xl:px-0'>
           <div className='flex w-full items-center justify-between lg:w-1/4'>
-            <Link href='/'>
-              <Image
-                src={logo}
-                alt='Chad Luman logo'
-                width={128}
-                height={89}
-                priority
-                style={{ height: 'auto' }}
-              />
+            <Link
+              href='/'
+              className='flex items-center gap-3 text-[#f1efe7] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#d8ff3e]'
+            >
+              <span className='flex h-9 w-9 items-center justify-center border border-[#d8ff3e] font-serif text-lg'>
+                CL
+              </span>
+              <span>
+                <span className='block text-sm font-bold tracking-[0.08em]'>
+                  CHAD LUMAN
+                </span>
+                <span className='block font-mono text-[8px] tracking-[0.2em] text-[#77756e] uppercase'>
+                  Systems + Web
+                </span>
+              </span>
             </Link>
 
             <button
               onClick={() => setNavigationOpen(!navigationOpen)}
-              className='block lg:hidden'
+              className='block min-h-11 min-w-11 lg:hidden'
+              aria-label={
+                navigationOpen ? 'Close navigation' : 'Open navigation'
+              }
+              aria-expanded={navigationOpen}
             >
               <span className='relative block h-5.5 w-5.5 cursor-pointer'>
                 <span className='du-block absolute right-0 h-full w-full'>
@@ -89,7 +97,7 @@ const Header = () => {
           <div
             className={`invisible h-0 w-full items-center justify-between lg:visible lg:flex lg:h-auto lg:w-3/4 ${
               navigationOpen
-                ? 'bg-dark visible! relative mt-4 h-auto! max-h-[400px] overflow-y-scroll rounded-md p-7.5 shadow-lg'
+                ? 'visible! relative mt-4 h-auto! max-h-[400px] overflow-y-scroll border border-white/10 bg-[#151512] p-7 shadow-lg'
                 : ''
             }`}
           >
@@ -109,10 +117,10 @@ const Header = () => {
                     ) : (
                       <Link
                         href={`${menuItem.path}`}
-                        className={`hover:nav-gradient relative border border-transparent px-4 py-1.5 text-sm hover:text-white ${
+                        className={`relative px-4 py-3 font-mono text-[10px] tracking-[0.16em] uppercase transition hover:text-[#d8ff3e] focus-visible:outline-2 focus-visible:outline-[#d8ff3e] ${
                           pathUrl === menuItem.path
-                            ? 'nav-gradient text-white'
-                            : 'text-white/80'
+                            ? 'text-[#d8ff3e]'
+                            : 'text-[#aaa89f]'
                         }`}
                       >
                         {menuItem.title}

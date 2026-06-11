@@ -1,37 +1,55 @@
-import SectionTitle from "@/components/Common/SectionTitle";
-import SingleFeature from "./SingleFeature";
-import featuresData from "./featuresData";
+const principles = [
+  {
+    number: '01',
+    title: 'Understand the operation',
+    copy: 'Start with the real workflow, constraints, and people involved before choosing the interface or stack.',
+  },
+  {
+    number: '02',
+    title: 'Make complexity legible',
+    copy: 'Turn technical requirements into clear states, useful feedback, and decisions a user can understand.',
+  },
+  {
+    number: '03',
+    title: 'Ship for the next person',
+    copy: 'Build maintainable systems with sensible structure, documented assumptions, and dependable handoffs.',
+  },
+];
 
 const Features = () => {
   return (
     <section
-      id="features"
-      className="scroll-mt-17 overflow-hidden pt-17.5 lg:pt-22.5 xl:pt-27.5"
+      id='features'
+      className='border-y border-white/10 bg-[#d8ff3e] text-[#11110f]'
     >
-      <div className="mx-auto max-w-[1222px] px-4 sm:px-8 xl:px-0">
-        <SectionTitle
-          subTitle="Core Highlights"
-          title="What I Bring"
-          paragraph="Experience across operations, systems engineering, and modern web development."
-        />
-
-        <div className="relative">
-          <div className="features-row-border absolute left-1/2 top-1/2 hidden h-[1px] w-1/2 -translate-y-1/2 rotate-90 lg:left-1/4 lg:block lg:-translate-x-1/3"></div>
-          <div className="features-row-border absolute right-1/2 top-1/2 hidden h-[1px] w-1/2 -translate-y-1/2 rotate-90 lg:right-[8.3%] lg:block"></div>
-
-          {/* <!--=== Features Row ===--> */}
-          <div className="flex flex-wrap justify-center">
-            {featuresData.slice(0, 3).map((feature) => (
-              <SingleFeature key={feature.id} feature={feature} />
-            ))}
+      <div className='mx-auto max-w-[1240px] px-5 py-20 sm:px-8 lg:py-24 xl:px-0'>
+        <div className='grid gap-12 lg:grid-cols-[0.7fr_1.3fr] lg:gap-24'>
+          <div data-anime-reveal>
+            <p
+              className='font-mono text-[11px] tracking-[0.22em] uppercase'
+              data-anime-child
+            >
+              03 / Working method
+            </p>
+            <h2
+              className='mt-5 font-serif text-5xl leading-[0.95] tracking-[-0.05em] sm:text-6xl'
+              data-anime-child
+            >
+              Operator habits, applied to software.
+            </h2>
           </div>
 
-          <div className="features-row-border h-[1px] w-full"></div>
-
-          {/* <!--=== Features Row ===--> */}
-          <div className="flex flex-wrap justify-center">
-            {featuresData.slice(3).map((feature) => (
-              <SingleFeature key={feature.title} feature={feature} />
+          <div className='border-t border-black/30' data-anime-reveal>
+            {principles.map((principle) => (
+              <article
+                key={principle.number}
+                className='grid gap-4 border-b border-black/30 py-7 sm:grid-cols-[60px_0.8fr_1.2fr] sm:gap-7'
+                data-anime-child
+              >
+                <span className='font-mono text-xs'>{principle.number}</span>
+                <h3 className='text-lg font-bold'>{principle.title}</h3>
+                <p className='leading-7 text-black/70'>{principle.copy}</p>
+              </article>
             ))}
           </div>
         </div>

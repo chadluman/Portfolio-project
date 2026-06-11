@@ -31,7 +31,7 @@ export const companiesLink: FooterLink[] = [
   {
     id: 11,
     title: "Resume",
-    href: "https://linkedin.com/in/chad-luman",
+    href: "/Chad_Luman_Resume.pdf",
     newTab: true,
   },
   {

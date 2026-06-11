@@ -1,52 +1,77 @@
-import Image from "next/image";
+const timeline = [
+  {
+    marker: '01',
+    title: 'Communications',
+    context: 'United States Marine Corps',
+    description:
+      'Built the foundation: disciplined troubleshooting, field communications, and reliable systems under real operational constraints.',
+  },
+  {
+    marker: '02',
+    title: 'Intelligence & IT',
+    context: 'Army / Technical Operations',
+    description:
+      'Supported users, networks, servers, and mission workflows while translating technical detail into decisions leaders could use.',
+  },
+  {
+    marker: '03',
+    title: 'Product Development',
+    context: 'Full Stack Web',
+    description:
+      'Now applying that systems experience to responsive applications, data-driven workflows, and maintainable software delivery.',
+  },
+];
 
 const AboutSection = () => {
   return (
-    <section id="about" className="overflow-hidden">
-      <div className="relative mx-auto max-w-[1170px] px-4 py-20 sm:px-8 lg:py-25 xl:px-0">
-        <div className="about-divider-gradient absolute bottom-0 left-0 h-[1px] w-full"></div>
-
-        <div className="flex flex-wrap justify-between gap-11 xl:flex-nowrap">
-          <div
-            className="wow fadeInLeft w-full max-w-[570px]"
-            data-anime-reveal
-          >
-            <span className="hero-subtitle-text mb-5 block font-semibold">
-            About Me
-          </span>
-
-          <h2 className="mb-5 text-2xl font-extrabold text-white sm:text-4xl xl:text-heading-2">
-            Veteran, Intelligence Analyst, and Full Stack Web Developer
-          </h2>
-          <p className="mb-9 font-medium">
-            United States Marine Corps veteran and Army Intelligence Analyst with
-            8+ years in telecommunications, IT systems, and full stack web
-            development. I specialize in building scalable, responsive
-            applications, troubleshooting complex systems, and delivering
-            solutions that bridge technical and non-technical teams.
-          </p>
-
-          <ul className="mb-9 list-disc space-y-2 pl-5 text-white/80">
-            <li>Delivered $2.6M in potential cost savings through system optimization.</li>
-            <li>Supported 500+ users across 70+ communications and IT systems.</li>
-            <li>Built scalable web apps with React, Tailwind, and MySQL.</li>
-            <li>Experienced in GitHub version control and Vercel deployment.</li>
-          </ul>
-
-          <a
-            href="mailto:Luman.Chad@outlook.com"
-            className="hero-button-gradient inline-flex rounded-lg px-7 py-3 font-medium text-white duration-300 ease-in hover:opacity-80"
-            data-anime-button
-          >
-            Contact Me
-          </a>
+    <section id='about' className='border-b border-white/10 bg-[#151512]'>
+      <div className='mx-auto max-w-[1240px] px-5 py-24 sm:px-8 lg:py-32 xl:px-0'>
+        <div className='grid gap-12 lg:grid-cols-[0.72fr_1.28fr] lg:gap-24'>
+          <div data-anime-reveal>
+            <p
+              className='font-mono text-[11px] tracking-[0.22em] text-[#d8ff3e] uppercase'
+              data-anime-child
+            >
+              01 / Field notes
+            </p>
+            <h2
+              className='mt-5 max-w-[420px] font-serif text-5xl leading-[0.98] tracking-[-0.045em] text-[#f1efe7] sm:text-6xl'
+              data-anime-child
+            >
+              From field systems to product systems.
+            </h2>
+            <p
+              className='mt-7 max-w-[460px] leading-7 text-[#aaa89f]'
+              data-anime-child
+            >
+              My path into development was not a straight line through a design
+              agency or coding bootcamp. It came through communications,
+              intelligence, infrastructure, and years of making complicated
+              systems understandable.
+            </p>
           </div>
 
-          <div
-            className="wow fadeInRight relative hidden aspect-556/401 w-full xl:block"
-            data-anime-reveal
-          >
-            <Image src="/images/about/about.svg" alt="about" fill />
+          <div className='border-t border-white/20' data-anime-reveal>
+            {timeline.map((item) => (
+              <article
+                key={item.marker}
+                className='grid gap-5 border-b border-white/15 py-8 sm:grid-cols-[70px_0.8fr_1.2fr] sm:gap-8'
+                data-anime-child
+              >
+                <span className='font-mono text-xs text-[#d8ff3e]'>
+                  {item.marker}
+                </span>
+                <div>
+                  <h3 className='text-xl font-semibold text-[#f1efe7]'>
+                    {item.title}
+                  </h3>
+                  <p className='mt-2 font-mono text-[10px] tracking-[0.15em] text-[#77756e] uppercase'>
+                    {item.context}
+                  </p>
+                </div>
+                <p className='leading-7 text-[#aaa89f]'>{item.description}</p>
+              </article>
+            ))}
           </div>
         </div>
       </div>

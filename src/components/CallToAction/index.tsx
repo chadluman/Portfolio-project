@@ -1,74 +1,39 @@
-import Image from "next/image";
-import Link from "next/link";
+import Link from 'next/link';
 
 const CallToAction = () => {
   return (
-    <section id="contact">
-      <div className="mx-auto max-w-[1170px] px-4 sm:px-8 xl:px-0">
-        <div className="cta-box-gradient relative z-999 overflow-hidden rounded-[30px] bg-dark px-4 py-20 lg:py-25">
-          {/* <!-- bg shapes --> */}
-
-          <div className="absolute bottom-0 left-0 -z-1 h-full w-full bg-[url(/images/cta/grid.svg)] bg-cover bg-bottom bg-no-repeat"></div>
-
-          <div className="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
-            <span className="absolute bottom-0 left-1/2 -z-1 h-full w-full -translate-x-1/2">
-              <Image
-                src="/images/blur/blur-22.svg"
-                alt="blur-sm"
-                fill
-                className="max-w-none"
-              />
-            </span>
-            <span className="absolute bottom-0 left-1/2 -z-1 h-full w-full -translate-x-1/2">
-              <Image
-                src="/images/blur/blur-23.svg"
-                alt="blur-sm"
-                fill
-                className="max-w-none"
-              />
-            </span>
-            <span className="absolute bottom-0 left-1/2 -z-1 aspect-530/253 max-w-[530px] -translate-x-1/2">
-              <Image
-                src="/images/blur/blur-24.svg"
-                alt="blur-sm"
-                fill
-                className="max-w-none"
-              />
-            </span>
-          </div>
-
-          {/* <!-- stars --> */}
-          <div className="absolute -bottom-25 left-1/2 -z-1 h-60 w-full max-w-[482px] -translate-x-1/2 overflow-hidden">
-            <div className="stars"></div>
-            <div className="stars2"></div>
-          </div>
-
-          <div className="wow fadeInUp text-center" data-anime-reveal>
-            <span className="hero-subtitle-gradient relative mb-4 inline-flex items-center gap-2 rounded-full px-4.5 py-2 text-sm font-medium">
-              <Image
-                src="/images/hero/icon-title.svg"
-                alt="icon"
-                width={17}
-                height={16}
-              />
-
-              <span className="hero-subtitle-text">Ready to collaborate?</span>
-            </span>
-            <h2 className="mb-4.5 text-2xl font-extrabold text-white sm:text-4xl xl:text-heading-2">
-              Let&apos;s build something together
-            </h2>
-            <p className="mx-auto mb-9 max-w-[714px] font-medium">
-              Reach out to discuss projects, freelancing opportunities, or
-              anything related to web development, systems engineering, and
-              operations.
+    <section id='contact' className='editorial-grid bg-[#11110f]'>
+      <div className='mx-auto max-w-[1240px] px-5 py-24 sm:px-8 lg:py-36 xl:px-0'>
+        <div className='grid gap-12 border-t border-white/20 pt-10 lg:grid-cols-[1fr_auto] lg:items-end'>
+          <div data-anime-reveal>
+            <p
+              className='font-mono text-[11px] tracking-[0.22em] text-[#d8ff3e] uppercase'
+              data-anime-child
+            >
+              04 / Open channel
             </p>
+            <h2
+              className='mt-6 max-w-[880px] font-serif text-[clamp(3.5rem,8vw,7.5rem)] leading-[0.86] tracking-[-0.06em] text-[#f1efe7]'
+              data-anime-child
+            >
+              Have a useful problem to solve?
+            </h2>
+          </div>
 
+          <div className='lg:pb-3' data-anime-reveal>
+            <p
+              className='max-w-[350px] leading-7 text-[#aaa89f]'
+              data-anime-child
+            >
+              I&apos;m open to full-time roles, contract projects, and
+              conversations about web products or technical operations.
+            </p>
             <Link
-              href="mailto:Luman.Chad@outlook.com"
-              className="hero-button-gradient inline-flex rounded-lg px-7 py-3 font-medium text-white duration-300 ease-in hover:opacity-80"
+              href='mailto:Luman.Chad@outlook.com'
+              className='mt-7 inline-flex min-h-12 items-center bg-[#d8ff3e] px-6 font-mono text-xs font-bold tracking-[0.14em] text-[#11110f] uppercase transition hover:bg-[#efffa3] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#d8ff3e]'
               data-anime-button
             >
-              Email Me
+              Start a conversation
             </Link>
           </div>
         </div>
