@@ -229,29 +229,76 @@
         opacity: 0.72;
       }
 
-      .quick-cities {
+      .saved-cities {
+        margin-top: 20px;
+      }
+
+      .saved-cities-head {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+        margin-bottom: 10px;
+      }
+
+      .saved-cities-head strong {
+        font-size: 12px;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+      }
+
+      .saved-cities-head span,
+      .saved-empty {
+        color: var(--muted);
+        font-size: 13px;
+      }
+
+      .saved-city-list {
         display: flex;
         flex-wrap: wrap;
         gap: 10px;
       }
 
-      .city-chip {
+      .saved-city {
+        display: inline-flex;
+        align-items: stretch;
         border: 1px solid var(--line);
-        padding: 9px 12px;
-        color: var(--muted);
+        border-radius: 14px;
+        overflow: hidden;
         background: rgba(247, 251, 255, 0.06);
+      }
+
+      .city-chip,
+      .remove-city {
+        border-radius: 0;
+        color: var(--muted);
+        background: transparent;
         transition:
-          transform 160ms ease,
-          border-color 160ms ease,
           color 160ms ease,
           background 160ms ease;
       }
 
-      .city-chip:hover {
-        transform: translateY(-1px);
-        border-color: rgba(181, 72, 255, 0.7);
+      .city-chip {
+        padding: 9px 12px;
+      }
+
+      .remove-city {
+        min-width: 40px;
+        border-left: 1px solid var(--line);
+        font-size: 18px;
+      }
+
+      .city-chip:hover,
+      .remove-city:hover {
         color: white;
         background: rgba(155, 22, 241, 0.18);
+      }
+
+      .city-chip:focus-visible,
+      .remove-city:focus-visible,
+      .save-city-button:focus-visible {
+        outline: 2px solid var(--violet-hot);
+        outline-offset: -2px;
       }
 
       .message {
@@ -459,6 +506,32 @@
         gap: 18px;
       }
 
+      .weather-actions {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 10px;
+      }
+
+      .save-city-button {
+        min-height: 44px;
+        border: 1px solid rgba(181, 72, 255, 0.55);
+        padding: 10px 14px;
+        color: white;
+        background: rgba(155, 22, 241, 0.16);
+      }
+
+      .save-city-button:hover:not(:disabled) {
+        background: rgba(155, 22, 241, 0.3);
+      }
+
+      .save-city-button:disabled {
+        cursor: default;
+        border-color: rgba(157, 242, 201, 0.35);
+        color: var(--good);
+        background: rgba(157, 242, 201, 0.08);
+      }
+
       .weather-head h2 {
         margin: 8px 0 8px;
         font-size: clamp(34px, 5vw, 58px);
@@ -589,6 +662,11 @@
           width: 100%;
         }
 
+        .weather-actions {
+          width: 100%;
+          align-items: flex-start;
+        }
+
         form {
           flex-direction: column;
         }
@@ -645,12 +723,12 @@
               <button id="search-button" type="submit">Scan Weather</button>
             </form>
 
-            <div class="quick-cities" aria-label="Quick city searches">
-              <button class="city-chip" type="button" data-city="Clarksville, TN">Clarksville</button>
-              <button class="city-chip" type="button" data-city="Nashville, TN">Nashville</button>
-              <button class="city-chip" type="button" data-city="Seattle, WA">Seattle</button>
-              <button class="city-chip" type="button" data-city="Miami, FL">Miami</button>
-              <button class="city-chip" type="button" data-city="Denver, CO">Denver</button>
+            <div class="saved-cities" aria-labelledby="saved-cities-title">
+              <div class="saved-cities-head">
+                <strong id="saved-cities-title">Saved cities</strong>
+                <span>Add a city after a successful search</span>
+              </div>
+              <div class="saved-city-list" id="saved-city-list"></div>
             </div>
 
             <div id="message"></div>
@@ -667,7 +745,7 @@
                 <p class="eyebrow">Awaiting signal</p>
                 <h3>No blank slate here.</h3>
                 <p>
-                  Pick a city or type your own. The dashboard will shift mood,
+                  Type a city to begin. The dashboard will shift mood,
                   color, and details once the first weather report lands.
                 </p>
               </article>
@@ -684,7 +762,10 @@
       const message = document.querySelector("#message");
       const result = document.querySelector("#result");
       const localTime = document.querySelector("#local-time");
-      const cityChips = document.querySelectorAll(".city-chip");
+      const savedCityList = document.querySelector("#saved-city-list");
+      const storageKey = "weather-dashboard-saved-cities";
+      let currentWeather = null;
+      let savedCities = loadSavedCities();
 
       const weatherTone = {
         Clear: "clear",
@@ -734,6 +815,85 @@
           .join(" ");
       }
 
+      function loadSavedCities() {
+        try {
+          const stored = JSON.parse(localStorage.getItem(storageKey) || "[]");
+          return Array.isArray(stored) ? stored : [];
+        } catch {
+          return [];
+        }
+      }
+
+      function persistSavedCities() {
+        localStorage.setItem(storageKey, JSON.stringify(savedCities));
+      }
+
+      function cityKey(city) {
+        return city.query.trim().toLocaleLowerCase();
+      }
+
+      function isCitySaved(city) {
+        return savedCities.some((savedCity) => cityKey(savedCity) === cityKey(city));
+      }
+
+      function renderSavedCities() {
+        savedCityList.replaceChildren();
+
+        if (!savedCities.length) {
+          const empty = document.createElement("p");
+          empty.className = "saved-empty";
+          empty.textContent = "No saved cities yet.";
+          savedCityList.append(empty);
+          return;
+        }
+
+        savedCities.forEach((city) => {
+          const wrapper = document.createElement("div");
+          wrapper.className = "saved-city";
+
+          const searchButton = document.createElement("button");
+          searchButton.className = "city-chip";
+          searchButton.type = "button";
+          searchButton.textContent = city.label;
+          searchButton.addEventListener("click", () => runSearch(city.query));
+
+          const removeButton = document.createElement("button");
+          removeButton.className = "remove-city";
+          removeButton.type = "button";
+          removeButton.textContent = "×";
+          removeButton.setAttribute("aria-label", `Remove ${city.label} from saved cities`);
+          removeButton.addEventListener("click", () => removeSavedCity(city));
+
+          wrapper.append(searchButton, removeButton);
+          savedCityList.append(wrapper);
+        });
+      }
+
+      function addCurrentCity() {
+        if (!currentWeather || isCitySaved(currentWeather)) return;
+        savedCities = [...savedCities, currentWeather];
+        persistSavedCities();
+        renderSavedCities();
+        updateSaveButton();
+      }
+
+      function removeSavedCity(city) {
+        savedCities = savedCities.filter(
+          (savedCity) => cityKey(savedCity) !== cityKey(city),
+        );
+        persistSavedCities();
+        renderSavedCities();
+        updateSaveButton();
+      }
+
+      function updateSaveButton() {
+        const saveButton = document.querySelector("#save-city-button");
+        if (!saveButton || !currentWeather) return;
+        const saved = isCitySaved(currentWeather);
+        saveButton.disabled = saved;
+        saveButton.textContent = saved ? "City saved" : "Add city";
+      }
+
       function setLoading(isLoading) {
         button.disabled = isLoading;
         button.textContent = isLoading ? "Scanning..." : "Scan Weather";
@@ -746,6 +906,10 @@
       function renderWeather(data) {
         const tone = weatherTone[data.condition] || "clouds";
         const place = data.country ? `${data.city}, ${data.country}` : data.city;
+        currentWeather = {
+          label: place,
+          query: place,
+        };
         const range =
           Number.isFinite(data.tempMin) && Number.isFinite(data.tempMax)
             ? `${data.tempMin}&deg; / ${data.tempMax}&deg;`
@@ -759,13 +923,16 @@
                 <h2>${place}</h2>
                 <p class="description">${titleCase(data.description)}</p>
               </div>
-              <img
-                class="weather-icon"
-                src="https://openweathermap.org/img/wn/${data.icon}@4x.png"
-                alt="${data.description}"
-                width="104"
-                height="104"
-              />
+              <div class="weather-actions">
+                <img
+                  class="weather-icon"
+                  src="https://openweathermap.org/img/wn/${data.icon}@4x.png"
+                  alt="${data.description}"
+                  width="104"
+                  height="104"
+                />
+                <button class="save-city-button" id="save-city-button" type="button">Add city</button>
+              </div>
             </div>
 
             <div class="temperature-row">
@@ -787,6 +954,11 @@
             </div>
           </article>
         `;
+
+        document
+          .querySelector("#save-city-button")
+          .addEventListener("click", addCurrentCity);
+        updateSaveButton();
       }
 
       async function runSearch(city) {
@@ -795,6 +967,7 @@
 
         input.value = searchCity;
         setLoading(true);
+        currentWeather = null;
         result.innerHTML = "";
 
         try {
@@ -817,7 +990,7 @@
             <article class="empty-state">
               <p class="eyebrow">Signal lost</p>
               <h3>That forecast slipped away.</h3>
-              <p>Check the city name or try one of the quick searches while the dashboard stays ready.</p>
+              <p>Check the city name and spelling, then try the search again.</p>
             </article>
           `;
         } finally {
@@ -834,10 +1007,7 @@
         runSearch(input.value);
       });
 
-      cityChips.forEach((chip) => {
-        chip.addEventListener("click", () => runSearch(chip.dataset.city));
-      });
-
+      renderSavedCities();
       updateTime();
       setInterval(updateTime, 30000);
     </script>

@@ -15,14 +15,31 @@ The app is built from an AI tools starter template, but the current project has 
 
 ## Featured projects
 
-| Project | Stack | Demo path |
-| --- | --- | --- |
-| Weather Dashboard | React, Vite, Tailwind CSS, OpenWeatherMap API | `/weather-dashboard/index.html` |
-| Task Manager | HTML, CSS, JavaScript | `/apps/task-manager/index.html` |
-| MoveLedger | HTML, CSS, JavaScript, Node.js | `/apps/moveledger/index.html` |
-| North Sky Ballooning | React, Vite, Tailwind CSS, Express | `/apps/north-sky-ballooning/index.html` |
+| Project              | Stack                                         | Demo path                               |
+| -------------------- | --------------------------------------------- | --------------------------------------- |
+| Weather Dashboard    | React, Vite, Tailwind CSS, OpenWeatherMap API | `/weather-dashboard/index.html`         |
+| Task Manager         | HTML, CSS, JavaScript                         | `/apps/task-manager/index.html`         |
+| MoveLedger           | HTML, CSS, JavaScript, Node.js                | `/apps/moveledger/index.html`           |
+| North Sky Ballooning | React, Vite, Tailwind CSS, Express            | `/apps/north-sky-ballooning/index.html` |
 
 Project metadata lives in `src/data/projects.ts`.
+
+### Weather Dashboard
+
+The Weather Dashboard searches live OpenWeatherMap conditions through the
+portfolio API route at `/api/weather`.
+
+- Search for any city and view temperature, conditions, humidity, wind,
+  pressure, visibility, and sunrise/sunset data.
+- Add a city after a successful lookup instead of using preset quick-city
+  buttons.
+- Reopen or remove saved cities from the dashboard.
+- Keep saved cities between visits using browser `localStorage`.
+- Prevent duplicate saved-city entries.
+
+The portfolio-ready dashboard is served from
+`public/weather-dashboard/index.html`. Its React and Vite source is maintained
+in `other projects/Weather-Dashboard`.
 
 ## Tech stack
 
@@ -111,14 +128,17 @@ src/data/projects.ts    Portfolio project metadata
 src/libs                Auth, email, markdown, and reservation helpers
 src/markdown/docs       Local documentation content
 public/apps             Static demo builds served by the portfolio
+public/weather-dashboard Portfolio-ready Weather Dashboard
 public/images/projects  Project preview images
-other projects          Source folders for the showcased projects
+other projects          Source folders for showcased projects, including Weather Dashboard
 stripe/pricingData.ts   Stripe pricing plan data
 ```
 
 ## Notes
 
 - The OpenAI generation route currently uses `gpt-3.5-turbo`.
-- Weather Dashboard requires `OPENWEATHER_API_KEY` when run through the portfolio API route.
+- Weather Dashboard requires `OPENWEATHER_API_KEY` when run through the
+  portfolio API route. The standalone Vite source uses
+  `VITE_OPENWEATHER_API_KEY`.
 - Stripe checkout requires valid Stripe price IDs in `stripe/pricingData.ts` and `STRIPE_SECRET_KEY`.
 - Reservation data is handled by `src/libs/reservations.ts`; local and deployed storage behavior may differ depending on the environment.
