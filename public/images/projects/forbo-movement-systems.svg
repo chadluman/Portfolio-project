@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 800" role="img" aria-labelledby="title desc">
+  <title id="title">Forbo Movement Systems sales portal preview</title>
+  <desc id="desc">An industrial red and charcoal interface with customer, product, and quote panels.</desc>
+  <rect width="1280" height="800" fill="#f4f4f1"/>
+  <rect width="1280" height="92" fill="#202020"/>
+  <rect x="48" y="28" width="54" height="36" fill="#d71920"/>
+  <text x="122" y="57" fill="#fff" font-family="Arial, sans-serif" font-size="24" font-weight="700">MOVEMENT SYSTEMS / SALES PORTAL</text>
+  <rect x="48" y="132" width="360" height="620" rx="8" fill="#fff" stroke="#d9d9d4"/>
+  <text x="82" y="184" fill="#d71920" font-family="Arial, sans-serif" font-size="16" font-weight="700">CUSTOMER RECORD</text>
+  <rect x="82" y="218" width="292" height="52" rx="4" fill="#efefec"/><rect x="82" y="290" width="292" height="52" rx="4" fill="#efefec"/>
+  <rect x="82" y="382" width="132" height="42" rx="4" fill="#d71920"/>
+  <text x="111" y="409" fill="#fff" font-family="Arial, sans-serif" font-size="14" font-weight="700">LOOK UP</text>
+  <rect x="448" y="132" width="784" height="286" rx="8" fill="#fff" stroke="#d9d9d4"/>
+  <text x="482" y="184" fill="#202020" font-family="Arial, sans-serif" font-size="24" font-weight="700">Select a product series</text>
+  <rect x="482" y="220" width="210" height="150" rx="6" fill="#292929"/><rect x="714" y="220" width="210" height="150" rx="6" fill="#3c3c3c"/><rect x="946" y="220" width="252" height="150" rx="6" fill="#d71920"/>
+  <rect x="448" y="450" width="784" height="302" rx="8" fill="#202020"/>
+  <text x="482" y="506" fill="#fff" font-family="Arial, sans-serif" font-size="24" font-weight="700">Advanced quote configuration</text>
+  <rect x="482" y="548" width="320" height="54" rx="4" fill="#393939"/><rect x="824" y="548" width="374" height="54" rx="4" fill="#393939"/><rect x="482" y="630" width="176" height="48" rx="4" fill="#d71920"/>
+</svg>

@@ -8,21 +8,24 @@ The app is built from an AI tools starter template, but the current project has 
 
 - Portfolio landing page with about, project, pricing, docs, and auth routes.
 - Project gallery with detail pages for each featured project.
-- Embedded static demos for Task Manager, MoveLedger, North Sky Ballooning, and Weather Dashboard.
+- Embedded interface previews for Task Manager and MoveLedger, plus live demos for North Sky Ballooning and Weather Dashboard.
+- Case studies and source links for every public project repository other than this portfolio host.
 - AI example tools for article titles, business names, content writing, interview questions, product names, and spreadsheet prompts.
 - API routes for OpenAI content generation, OpenWeatherMap weather lookups, Stripe checkout, and reservation management.
 - Optional auth, email, Stripe, Mailchimp, and OpenAI integrations controlled by `integrations.config.tsx`.
 
 ## Featured projects
 
-| Project              | Stack                                         | Demo path                               |
-| -------------------- | --------------------------------------------- | --------------------------------------- |
-| Weather Dashboard    | React, Vite, Tailwind CSS, OpenWeatherMap API | `/weather-dashboard/index.html`         |
-| Task Manager         | HTML, CSS, JavaScript                         | `/apps/task-manager/index.html`         |
-| MoveLedger           | HTML, CSS, JavaScript, Node.js                | `/apps/moveledger/index.html`           |
-| North Sky Ballooning | React, Vite, Tailwind CSS, Express            | `/apps/north-sky-ballooning/index.html` |
+| Project                             | Stack                                     | Portfolio destination                   |
+| ----------------------------------- | ----------------------------------------- | --------------------------------------- |
+| Weather Dashboard                   | React, Vite, Tailwind CSS, OpenWeatherMap | `/weather-dashboard/index.html`         |
+| Task Manager                        | JavaScript, Express, MongoDB, JWT         | `/apps/task-manager/index.html`         |
+| MoveLedger                          | JavaScript, Node.js, MongoDB, OpenAI      | `/apps/moveledger/index.html`           |
+| North Sky Ballooning                | React, Vite, Tailwind CSS, Express        | `/apps/north-sky-ballooning/index.html` |
+| Forbo Movement Systems Sales Portal | JavaScript, Express, MongoDB              | `/projects/forbo-movement-systems`      |
+| Lyric the Producer                  | Next.js, TypeScript, OpenAI, Vercel       | `/projects/lyric-the-producer`          |
 
-Project metadata lives in `src/data/projects.ts`.
+Project metadata and GitHub source links live in `src/data/projects.ts`.
 
 ### Weather Dashboard
 

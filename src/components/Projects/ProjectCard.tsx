@@ -60,7 +60,7 @@ const ProjectCard = ({
           href={`/projects/${project.slug}`}
           className='mt-8 inline-flex items-center gap-3 border-b border-[#d8ff3e] pb-2 font-mono text-xs font-bold tracking-[0.14em] text-[#f1efe7] uppercase transition hover:text-[#d8ff3e] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#d8ff3e]'
         >
-          Inspect the project <span aria-hidden='true'>↗</span>
+          Inspect the project <span aria-hidden='true'>&rarr;</span>
         </Link>
       </div>
     </article>
