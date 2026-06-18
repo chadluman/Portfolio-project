@@ -32,7 +32,7 @@ const ProjectCard = ({
         />
         <div className='absolute inset-0 bg-[#d8ff3e]/0 transition duration-300 group-hover:bg-[#d8ff3e]/5' />
         <div className='absolute top-4 left-4 bg-[#11110f] px-3 py-2 font-mono text-[10px] tracking-[0.16em] text-[#d8ff3e] uppercase'>
-          Case study / {String(index + 1).padStart(2, '0')}
+          Live demo capture / {String(index + 1).padStart(2, '0')}
         </div>
       </Link>
 

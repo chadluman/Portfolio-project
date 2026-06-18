@@ -1,0 +1,58 @@
+name: Project integrity
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  schedule:
+    - cron: '17 9 * * 1'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify-project-demos:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - run: npm ci
+      - run: npm run verify:projects
+      - run: npm run lint
+      - run: npm run build
+
+      - name: Start production server
+        run: npm start -- -p 3001 > /tmp/portfolio-server.log 2>&1 &
+
+      - name: Wait for portfolio
+        run: |
+          for attempt in {1..30}; do
+            if curl --fail --silent http://localhost:3001/projects > /dev/null; then
+              exit 0
+            fi
+            sleep 1
+          done
+          cat /tmp/portfolio-server.log
+          exit 1
+
+      - name: Exercise every project demo
+        env:
+          DEMO_BASE_URL: http://localhost:3001
+          SMOKE_REQUIRE_WEATHER: 'false'
+        run: npm run smoke:projects
+
+      - name: Upload verified demo screenshots
+        uses: actions/upload-artifact@v4
+        with:
+          name: project-demo-screenshots
+          path: public/images/projects/*.png

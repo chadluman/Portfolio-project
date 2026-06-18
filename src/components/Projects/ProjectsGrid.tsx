@@ -1,6 +1,7 @@
 import { projects } from '@/data/projects';
 import Link from 'next/link';
 import ProjectCard from './ProjectCard';
+import ProjectIntegrityStatus from './ProjectIntegrityStatus';
 
 const ProjectsGrid = () => {
   return (
@@ -31,6 +32,8 @@ const ProjectsGrid = () => {
             </Link>
           </div>
         </div>
+
+        <ProjectIntegrityStatus />
 
         <div data-anime-reveal>
           {projects.map((project, index) => (

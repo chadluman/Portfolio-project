@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Lyric The Producer artist website demo" />
+    <title>Lyric The Producer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <a class="brand" href="#home" aria-label="Lyric The Producer home">
+        <img src="Logo.png" alt="" />
+        <span>Lyric The Producer</span>
+      </a>
+      <button class="menu-button" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+      <nav id="site-nav" aria-label="Primary navigation">
+        <a href="#music">Music</a>
+        <a href="#bio">Bio</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main id="main">
+      <section id="home" class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow">Artist website</p>
+          <h1>Lyric The Producer</h1>
+          <p class="tagline">Cinematic beats. Sharp hooks. Heavy atmosphere.</p>
+          <p class="lede">Immersive soundscapes built for replay value, emotion, and momentum. Explore current releases, upcoming music, and booking information.</p>
+          <div class="actions">
+            <a class="button primary" href="#music">Explore music</a>
+            <a class="button secondary" href="#contact">Booking and contact</a>
+          </div>
+        </div>
+        <div class="logo-stage">
+          <div class="logo-card"><img src="Logo.png" alt="Lyric The Producer logo" /></div>
+          <p>Dropping only the cleanest beats.</p>
+        </div>
+      </section>
+
+      <section class="stats" aria-label="Artist site overview">
+        <article><span>Releases</span><strong>2</strong><p>Current featured music.</p></article>
+        <article><span>Upcoming</span><strong>2</strong><p>New drops planned for 2026.</p></article>
+        <article><span>Booking</span><strong>Open</strong><p>Remote collaboration and live bookings.</p></article>
+      </section>
+
+      <section id="music" class="section">
+        <div class="section-heading"><p class="eyebrow">Music</p><h2>Current signal</h2><p>Featured releases and the latest artist feed.</p></div>
+        <div class="music-grid">
+          <article class="release-card feature">
+            <div><span class="status">Out now</span><h3>Midnight Signal</h3><p>Stream the latest work from Lyric The Producer on Spotify.</p></div>
+            <iframe title="Lyric The Producer on Spotify" src="https://open.spotify.com/embed/artist/3P1t0J10rV5iXDbAcmq8gM" loading="lazy" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+          </article>
+          <article class="release-card"><span class="status">Out now</span><h3>Lyric Live</h3><p>Listen through the official Apple Music artist page.</p><a href="https://music.apple.com/us/artist/lyric-the-producer/1800569761" target="_blank" rel="noreferrer">Open Apple Music</a></article>
+          <article class="release-card"><span class="status soon">Coming soon</span><h3>Afterburn</h3><p>Scheduled for Summer 2026.</p></article>
+          <article class="release-card"><span class="status soon">Coming soon</span><h3>No Sleep City</h3><p>Scheduled for Fall 2026.</p></article>
+        </div>
+      </section>
+
+      <section id="bio" class="section bio">
+        <div class="section-heading"><p class="eyebrow">Bio</p><h2>Discipline in every layer.</h2></div>
+        <p>I have been making music since I was eight, growing from a young musician into a self-taught producer with a sound shaped by discipline and experience. After years of building independently, I returned to college to pursue Music Production and Audio Engineering. Before stepping fully into music, I served in the United States Marine Corps, and that same grit and precision now fuel everything I create.</p>
+      </section>
+
+      <section id="contact" class="section contact">
+        <div class="section-heading"><p class="eyebrow">Contact</p><h2>Build the next sound.</h2><p>Available for remote collaboration and live bookings.</p></div>
+        <div class="contact-grid">
+          <a href="mailto:booking@lyrictheproducer.com"><span>Booking</span><strong>booking@lyrictheproducer.com</strong></a>
+          <a href="mailto:hello@lyrictheproducer.com"><span>General</span><strong>hello@lyrictheproducer.com</strong></a>
+          <a href="https://open.spotify.com/artist/3P1t0J10rV5iXDbAcmq8gM" target="_blank" rel="noreferrer"><span>Listen</span><strong>Spotify artist page</strong></a>
+        </div>
+      </section>
+    </main>
+    <footer><span>Lyric The Producer</span><a href="https://github.com/chadluman/lyrictheproducer" target="_blank" rel="noreferrer">View source on GitHub</a></footer>
+    <script src="app.js"></script>
+  </body>
+</html>

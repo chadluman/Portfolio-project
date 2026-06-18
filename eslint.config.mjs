@@ -6,6 +6,7 @@ export default defineConfig([
   ...nextVitals,
   ...nextTypeScript,
   {
+    files: ['**/*.{js,jsx,ts,tsx}'],
     rules: {
       '@typescript-eslint/ban-ts-comment': 'warn',
       '@typescript-eslint/no-explicit-any': 'warn',

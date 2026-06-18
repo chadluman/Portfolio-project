@@ -1,0 +1,63 @@
+[
+  {
+    "name": "Weather Dashboard",
+    "repository": "weather-dashboard",
+    "revision": "ee98bc3a",
+    "demo": "public/weather-dashboard/index.html",
+    "screenshot": "public/images/projects/weather-dashboard.png",
+    "mode": "repository build"
+  },
+  {
+    "name": "Task Manager",
+    "repository": "Task_Manager",
+    "revision": "71981597",
+    "demo": "public/apps/task-manager/index.html",
+    "screenshot": "public/images/projects/task-manager.png",
+    "mode": "repository frontend with local demo API",
+    "files": {
+      "script.js": "public/apps/task-manager/script.js",
+      "style.css": "public/apps/task-manager/style.css"
+    }
+  },
+  {
+    "name": "MoveLedger",
+    "repository": "moveledger",
+    "revision": "980bd3f8",
+    "demo": "public/apps/moveledger/index.html",
+    "screenshot": "public/images/projects/moveledger.png",
+    "mode": "repository frontend with local demo API",
+    "files": {
+      "src/app.js": "public/apps/moveledger/app.js",
+      "src/styles.css": "public/apps/moveledger/styles.css"
+    }
+  },
+  {
+    "name": "North Sky Ballooning",
+    "repository": "flying-balloon",
+    "revision": "2bb07f70",
+    "demo": "public/apps/north-sky-ballooning/index.html",
+    "screenshot": "public/images/projects/north-sky-ballooning.png",
+    "mode": "repository build"
+  },
+  {
+    "name": "Forbo Movement Systems",
+    "repository": "ForboMovementSystems",
+    "revision": "6e175bfb",
+    "demo": "public/apps/forbo-movement-systems/index.html",
+    "screenshot": "public/images/projects/forbo-movement-systems.png",
+    "mode": "repository frontend with local demo API",
+    "files": {
+      "app.js": "public/apps/forbo-movement-systems/app.js",
+      "styles.css": "public/apps/forbo-movement-systems/styles.css",
+      "engineering-data.js": "public/apps/forbo-movement-systems/engineering-data.js"
+    }
+  },
+  {
+    "name": "Lyric The Producer",
+    "repository": "lyrictheproducer",
+    "revision": "f1742670",
+    "demo": "public/apps/lyric-the-producer/index.html",
+    "screenshot": "public/images/projects/lyric-the-producer.png",
+    "mode": "static adaptation of repository artist content"
+  }
+]

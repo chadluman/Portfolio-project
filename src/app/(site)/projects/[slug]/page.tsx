@@ -73,6 +73,15 @@ const ProjectDetailsPage = async ({ params }: ProjectPageProps) => {
                 ))}
               </div>
 
+              <div className='mb-8 border-l-2 border-[#d8ff3e] pl-4'>
+                <p className='font-mono text-[10px] tracking-[0.16em] text-[#d8ff3e] uppercase'>
+                  Demo source / {project.sourceRevision}
+                </p>
+                <p className='mt-2 text-sm leading-6 text-white/70'>
+                  {project.demoNote}
+                </p>
+              </div>
+
               <div className='flex flex-wrap gap-4'>
                 <Link
                   href='/projects'

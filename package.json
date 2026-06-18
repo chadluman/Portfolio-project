@@ -9,7 +9,9 @@
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "verify:projects": "node scripts/verify-project-demos.mjs",
+    "smoke:projects": "node scripts/smoke-project-demos.cjs"
   },
   "overrides": {
     "brace-expansion": "^1.1.13",
@@ -30,7 +32,7 @@
     "next": "^16.2.4",
     "next-auth": "^4.24.14",
     "nextjs-toploader": "^1.5.3",
-    "nodemailer": "^8.0.7",
+    "nodemailer": "^9.0.1",
     "openai": "^4.29.2",
     "postcss": "^8.5.13",
     "prismjs": "^1.29.0",
