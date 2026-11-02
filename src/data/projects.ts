@@ -16,6 +16,12 @@ export type Project = {
   stack: string[];
   highlights: string[];
   runSteps: string[];
+  problem?: string;
+  constraints?: string[];
+  decisions?: string[];
+  outcome?: string;
+  demoLimits?: string;
+  nextStep?: string;
 };
 
 export const projects: Project[] = [
@@ -47,6 +53,22 @@ export const projects: Project[] = [
       'Set OPENWEATHER_API_KEY on the portfolio server',
       'Open /weather-dashboard/index.html',
     ],
+    problem:
+      'Look up current weather quickly, without a cluttered interface or a silent failure when a city is not found.',
+    constraints: [
+      'Third-party API key must not be shipped in the client',
+      'Errors (unknown city, network failure) need a legible state, not a blank card',
+    ],
+    decisions: [
+      'Vite + React with reusable search, weather-card, and error-message components',
+      'Weather requests routed through the portfolio server API with an environment-based key',
+    ],
+    outcome:
+      'A working, responsive search that handles error states explicitly. Kept deliberately modest: its value is as a clean API-integration example, not a product claim.',
+    demoLimits:
+      'Live search requires OPENWEATHER_API_KEY on the portfolio server; without it, the UI loads but a real lookup cannot complete.',
+    nextStep:
+      'Saved cities, forecast view, and geolocation — only if they do not clutter the core search.',
   },
   {
     slug: 'task-manager',
@@ -77,6 +99,21 @@ export const projects: Project[] = [
       'Run npm install, then npm start',
       'Open http://localhost:5501',
     ],
+    problem:
+      'Keep personal and team work in one place, without one team\'s tasks leaking into another team\'s view.',
+    constraints: [
+      'Authenticated access with personal vs. team visibility',
+      'Assignments, priorities, due dates, subtasks, progress, archives, and activity history must stay consistent',
+    ],
+    decisions: [
+      'Vanilla JavaScript frontend with an Express / MongoDB / Mongoose backend and JWT',
+      'Backend-enforced ownership and team boundaries, not frontend-only hiding',
+    ],
+    outcome:
+      'A team can run assignments end-to-end in the demo, with ownership and team boundaries enforced by the backend. No measured real-world outcome is claimed here.',
+    demoLimits:
+      'Browser-local demo API and sample team data in the portfolio version; no real accounts or production data.',
+    nextStep: 'Real-time updates and a clearer archive / restore flow.',
   },
   {
     slug: 'moveledger',
@@ -169,6 +206,25 @@ export const projects: Project[] = [
       'Run npm install, then npm start',
       'Open http://localhost:3000 and sign in',
     ],
+    problem:
+      'A salesperson on the go needs to bridge the gap between the service / product a customer was specified and the product to recommend — then hand a clean quote to the person who handles billing.',
+    constraints: [
+      'Field use on phone / tablet',
+      'Engineering data from manuals, not guesswork',
+      'Draft quotes must be savable to a customer record',
+      'Billing needs a file, not just a screen',
+    ],
+    decisions: [
+      'Express 5 + MongoDB / Mongoose with secure cookies for authenticated customer lookup and quote history',
+      'Product comparison and conveyor configuration in one workspace',
+      'Pull-force estimation alongside the quote, not in a separate calculator',
+    ],
+    outcome:
+      'One workspace for customer records, purchase history, product selection, configuration, engineering references, and draft quotes. No measured time-saved outcome is claimed here.',
+    demoLimits:
+      'The portfolio demo uses browser-local customer and quote data. It does not connect to a production database or real customer records. Export in the live app is currently browser Print and JSON download, plus Save to MongoDB — direct PDF / Excel billing export is a known next step.',
+    nextStep:
+      'Direct PDF and Excel/CSV billing export, and a simplified mobile field flow (customer & needs, products, selected, send to billing) so the workspace does not show every section at once.',
   },
   {
     slug: 'lyric-the-producer',

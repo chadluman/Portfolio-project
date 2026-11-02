@@ -155,6 +155,73 @@ const ProjectDetailsPage = async ({ params }: ProjectPageProps) => {
               </div>
             </div>
           </div>
+
+          {(project.problem ||
+            project.constraints ||
+            project.decisions ||
+            project.outcome ||
+            project.demoLimits ||
+            project.nextStep) && (
+            <div className='mt-14' data-anime-reveal>
+              <div className='features-box-border relative rounded-lg' data-anime-child>
+                <div className='box-hover box-hover-small h-full rounded-lg p-8'>
+                  <h3 className='text-heading-6 mb-5 font-semibold text-white'>
+                    Case Study
+                  </h3>
+                  {project.problem && (
+                    <>
+                      <h4 className='mb-2 font-semibold text-white'>Problem</h4>
+                      <p className='mb-5 font-medium'>{project.problem}</p>
+                    </>
+                  )}
+                  {project.constraints && (
+                    <>
+                      <h4 className='mb-2 font-semibold text-white'>Constraints</h4>
+                      <ul className='mb-5 space-y-2'>
+                        {project.constraints.map((item) => (
+                          <li key={item} className='flex gap-3 font-medium'>
+                            <span className='bg-purple-light mt-2 h-2 w-2 shrink-0 rounded-full'></span>
+                            <span>{item}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </>
+                  )}
+                  {project.decisions && (
+                    <>
+                      <h4 className='mb-2 font-semibold text-white'>Decisions</h4>
+                      <ul className='mb-5 space-y-2'>
+                        {project.decisions.map((item) => (
+                          <li key={item} className='flex gap-3 font-medium'>
+                            <span className='bg-purple-light mt-2 h-2 w-2 shrink-0 rounded-full'></span>
+                            <span>{item}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </>
+                  )}
+                  {project.outcome && (
+                    <>
+                      <h4 className='mb-2 font-semibold text-white'>Outcome</h4>
+                      <p className='mb-5 font-medium'>{project.outcome}</p>
+                    </>
+                  )}
+                  {project.demoLimits && (
+                    <>
+                      <h4 className='mb-2 font-semibold text-white'>Demo limits</h4>
+                      <p className='mb-5 font-medium'>{project.demoLimits}</p>
+                    </>
+                  )}
+                  {project.nextStep && (
+                    <>
+                      <h4 className='mb-2 font-semibold text-white'>Next step</h4>
+                      <p className='font-medium'>{project.nextStep}</p>
+                    </>
+                  )}
+                </div>
+              </div>
+            </div>
+          )}
         </div>
       </section>
     </>
