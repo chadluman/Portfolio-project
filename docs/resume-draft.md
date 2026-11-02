@@ -55,7 +55,10 @@ generation (RAG).
   performed system upgrades and maintenance to ensure uptime.
 - **United States Marine Corps — Telecommunications & IT Specialist (2015 – 2020)**
   Built and maintained large-scale communication and network systems
-  under real operational constraints.
+  under real operational constraints. Service figures for this period:
+  500+ users supported, 70+ systems maintained, $2.6M potential
+  savings identified (confirmed by Chad 2026-11-02 as referring
+  specifically to Marine Corps service).
 
 ## Selected Projects
 - **StreamControl.studio (2026 – Present) — in development**
@@ -92,9 +95,9 @@ generation (RAG).
   maintained, and $2.6M potential savings identified are kept per
   Chad 2026-11-02 — he confirmed the quantifiable data from his
   times in service were verifiable and concrete, and are strong
-  responsibility signals. They should be tied to their service /
-  operations context when published; the specific service period(s)
-  for each figure still need Chad's confirmation.
+  responsibility signals, and that they refer specifically to his
+  time in the Marine Corps. They are now tied to the Marine Corps
+  entry above.
 - Sourced current figures used alongside them: 750+ tablets,
   50+ video kiosks, 80+ phone systems, 1,200+ IT assets.
 - Homepage availability wording is not changed by this PR. This draft
